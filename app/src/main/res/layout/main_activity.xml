@@ -1,61 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myGridLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:rowCount="6">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/accountWrapper"
+    <AutoCompleteTextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:hint="@string/username">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/myAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="16dp"
-            android:height="45dp"
-            android:gravity="center_vertical"
-            android:paddingStart="@dimen/text_padding_left"
-            android:paddingEnd="@dimen/text_padding_right" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordWrapper"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:hint="@string/password">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/myPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="16dp"
-            android:height="45dp"
-            android:gravity="center_vertical"
-            android:paddingStart="@dimen/text_padding_left"
-            android:paddingEnd="@dimen/text_padding_right" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="180dp"
+        android:layout_columnSpan="4"
+        android:layout_marginLeft="2pt"
+        android:layout_marginRight="2pt"
+        android:background="#fff"
+        android:hint="@string/password"
+        android:padding="3pt"
+        android:text="12 + 56 = 68"
+        android:textColor="#000"
+        android:textSize="48sp" />
 
     <Button
-        android:id="@+id/login"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/login"
-        android:textColor="#fff"
-        android:textSize="20sp" />
-</LinearLayout>
+        android:layout_height="70dp"
+        android:layout_columnSpan="4"
+        android:text="@string/clear"
+        android:textSize="28sp" />
+</GridLayout>
