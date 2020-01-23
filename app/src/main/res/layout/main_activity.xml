@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/myGridLayout"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:columnCount="4"
-    android:rowCount="6">
+    android:layout_height="match_parent">
 
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_columnSpan="4"
-        android:layout_marginLeft="2pt"
-        android:layout_marginRight="2pt"
-        android:background="#fff"
-        android:hint="@string/password"
-        android:padding="3pt"
-        android:text="12 + 56 = 68"
-        android:textColor="#000"
-        android:textSize="48sp" />
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@mipmap/ic_launcher" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_columnSpan="4"
-        android:text="@string/clear"
-        android:textSize="28sp" />
-</GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view1"
+        android:layout_alignStart="@id/view1"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_alignStart="@id/view1"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/view1"
+        android:layout_toStartOf="@id/view1"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/view1"
+        android:layout_toEndOf="@id/view1"
+        android:background="@mipmap/ic_launcher" />
+
+</RelativeLayout>
