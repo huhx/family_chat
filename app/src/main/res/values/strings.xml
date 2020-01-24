@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">learn_android_books</string>
 
+    <string name="label_name">love</string>
+
     <string name="username">username</string>
     <string name="username_hint">please input your name</string>
     <string name="password">password</string>
