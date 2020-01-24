@@ -5,6 +5,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.huhx.wusq.R
 import kotlinx.android.synthetic.main.main_activity.*
 
@@ -36,8 +37,10 @@ class MainActivity : AppCompatActivity() {
             return@setNavigationItemSelectedListener true
         }
 
-        fab.setOnClickListener {
-            Toast.makeText(this, "FAB click", Toast.LENGTH_SHORT).show()
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT).setAction("Undo") {
+                Toast.makeText(this, "Data restored", Toast.LENGTH_SHORT).show()
+            }.show()
         }
     }
 
