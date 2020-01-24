@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_green_dark">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,7 +18,15 @@
             android:layout_marginTop="200dp"
             android:text="Main"
             android:textSize="50sp" />
-    </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_action_name" />
+    </FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nv_view"

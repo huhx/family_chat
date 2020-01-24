@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             }
             return@setNavigationItemSelectedListener true
         }
+
+        fab.setOnClickListener {
+            Toast.makeText(this, "FAB click", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
