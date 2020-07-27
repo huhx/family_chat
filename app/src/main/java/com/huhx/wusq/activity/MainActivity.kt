@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         initFruits()
-        recycler_view.layoutManager = GridLayoutManager(this, 2)
+        recycler_view.layoutManager = GridLayoutManager(this, 3)
         recycler_view.adapter = FruitAdapter(fruits)
 
         nv_view.setNavigationItemSelectedListener { item ->
