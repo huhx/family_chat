@@ -3,13 +3,13 @@
     <item
         android:id="@+id/account"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="My Account" />
+        android:title="@string/my_account" />
     <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Settings" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/mycart"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="My Cart" />
+        android:title="@string/my_cart" />
 </menu>
