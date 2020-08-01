@@ -39,11 +39,11 @@
         app:layout_constraintTop_toBottomOf="@id/qq_header">
 
         <EditText
-            android:drawableEnd="@drawable/main_more_icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edit_text_border"
+            android:drawableEnd="@drawable/main_more_icon"
             android:gravity="center"
             android:hint="@string/account_hint_text"
             android:importantForAutofill="no"
@@ -85,6 +85,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="40dp"
         android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
@@ -99,6 +100,18 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
+            android:background="#1A1F2F" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:paddingVertical="5dp" />
 
         <TextView
             android:id="@+id/user_register"
