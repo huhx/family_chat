@@ -1,12 +1,17 @@
 package com.huhx.family.ui.home
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.huhx.family.ChatRoomActivity
 import com.huhx.family.R
 import com.huhx.family.adapter.UserRecyclerAdapter
 import com.huhx.family.domain.User
@@ -40,11 +45,14 @@ class HomeFragment : Fragment() {
     private fun onItemClickListener(): OnItemClickListener {
         return object : OnItemClickListener {
             override fun onItemClick(user: User) {
-                Toast.makeText(activity, user.fullname, Toast.LENGTH_SHORT).show()
+                val intent = Intent(activity, ChatRoomActivity::class.java)
+                intent.putExtra("username", user.fullname)
+                activity?.startActivity(intent)
             }
 
             override fun onItemLongClick(user: User) {
-                Toast.makeText(activity, user.signature, Toast.LENGTH_SHORT).show()
+                val vibrator = activity?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE))
             }
         }
     }
