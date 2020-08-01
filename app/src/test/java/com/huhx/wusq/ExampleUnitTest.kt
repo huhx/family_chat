@@ -1,4 +1,4 @@
-package com.huhx.wusq
+package com.huhx.family
 
 import org.junit.Test
 

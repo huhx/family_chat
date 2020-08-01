@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="30dp"
-    tools:context=".activity.LoginActivity">
+    tools:context="com.huhx.family.activity.LoginActivity">
 
     <LinearLayout
         android:id="@+id/qq_header"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.huhx.wusq">
+    package="com.huhx.family">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,10 +14,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".HomeActivity"
+            android:name="com.huhx.family.HomeActivity"
             android:label="@string/title_activity_home" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.huhx.family.activity.LoginActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

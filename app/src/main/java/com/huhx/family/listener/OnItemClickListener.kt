@@ -1,6 +1,6 @@
-package com.huhx.wusq.listener
+package com.huhx.family.listener
 
-import com.huhx.wusq.domain.User
+import com.huhx.family.domain.User
 
 interface OnItemClickListener {
 

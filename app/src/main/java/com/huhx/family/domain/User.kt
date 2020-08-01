@@ -1,4 +1,4 @@
-package com.huhx.wusq.domain
+package com.huhx.family.domain
 
 data class User(
     val id: Int,

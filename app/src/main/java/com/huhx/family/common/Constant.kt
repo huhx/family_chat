@@ -1,4 +1,4 @@
-package com.huhx.wusq.common
+package com.huhx.family.common
 
 class Constant {
     companion object {

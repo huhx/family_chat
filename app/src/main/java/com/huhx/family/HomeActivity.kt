@@ -1,4 +1,4 @@
-package com.huhx.wusq
+package com.huhx.family
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.huhx.wusq.adapter.ViewPagerAdapter
-import com.huhx.wusq.ui.dashboard.DashboardFragment
-import com.huhx.wusq.ui.home.HomeFragment
-import com.huhx.wusq.ui.me.MeFragment
-import com.huhx.wusq.ui.notifications.NotificationsFragment
+import com.huhx.family.adapter.ViewPagerAdapter
+import com.huhx.family.ui.dashboard.DashboardFragment
+import com.huhx.family.ui.home.HomeFragment
+import com.huhx.family.ui.me.MeFragment
+import com.huhx.family.ui.notifications.NotificationsFragment
+import com.huhx.family.R
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -48,7 +49,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupViewPager() {
-        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+        val viewPagerAdapter =
+            ViewPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         val homeFragment = HomeFragment()
         val dashboardFragment = DashboardFragment()
         val notificationsFragment = NotificationsFragment()

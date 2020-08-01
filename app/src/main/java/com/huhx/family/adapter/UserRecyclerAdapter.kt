@@ -1,4 +1,4 @@
-package com.huhx.wusq.adapter
+package com.huhx.family.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.huhx.wusq.R
-import com.huhx.wusq.common.Constant
-import com.huhx.wusq.listener.OnItemClickListener
-import com.huhx.wusq.domain.User
+import com.huhx.family.R
+import com.huhx.family.common.Constant
+import com.huhx.family.listener.OnItemClickListener
+import com.huhx.family.domain.User
 import com.squareup.picasso.Picasso
 
 class UserRecyclerAdapter(private val users: List<User>, private val listener: OnItemClickListener) :

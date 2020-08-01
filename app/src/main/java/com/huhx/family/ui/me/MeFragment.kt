@@ -1,11 +1,11 @@
-package com.huhx.wusq.ui.me
+package com.huhx.family.ui.me
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.huhx.wusq.R
+import com.huhx.family.R
 
 class MeFragment : Fragment() {
 

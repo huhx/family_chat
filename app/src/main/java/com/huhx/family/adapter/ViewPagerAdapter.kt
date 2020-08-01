@@ -1,4 +1,4 @@
-package com.huhx.wusq.adapter
+package com.huhx.family.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

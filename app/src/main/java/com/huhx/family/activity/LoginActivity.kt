@@ -1,11 +1,11 @@
-package com.huhx.wusq.activity
+package com.huhx.family.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.huhx.wusq.HomeActivity
-import com.huhx.wusq.R
+import com.huhx.family.HomeActivity
+import com.huhx.family.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

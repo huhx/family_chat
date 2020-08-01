@@ -1,4 +1,4 @@
-package com.huhx.wusq.ui.home
+package com.huhx.family.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.huhx.wusq.R
-import com.huhx.wusq.adapter.UserRecyclerAdapter
-import com.huhx.wusq.domain.User
-import com.huhx.wusq.listener.OnItemClickListener
+import com.huhx.family.R
+import com.huhx.family.adapter.UserRecyclerAdapter
+import com.huhx.family.domain.User
+import com.huhx.family.listener.OnItemClickListener
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
