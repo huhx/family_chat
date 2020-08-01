@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.huhx.wusq.R
+import com.huhx.wusq.common.Constant
 import com.huhx.wusq.listener.OnItemClickListener
 import com.huhx.wusq.domain.User
 import com.squareup.picasso.Picasso
@@ -27,17 +28,14 @@ class UserRecyclerAdapter(private val users: List<User>, private val listener: O
         val signatureTextView: TextView = itemView.findViewById(R.id.user_signature)
     }
 
-    override fun getItemCount(): Int {
-        return users.size
-    }
+    override fun getItemCount(): Int = users.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val user = users[position]
         holder.userTextView.text = user.fullname
         holder.birthdayTextView.text = user.createTime
         holder.signatureTextView.text = user.signature
-        Picasso.get().load("http://huhx.cn/" + user.imageUrl).into(holder.userImageView)
-
+        Picasso.get().load(Constant.FILE_URL + user.imageUrl).into(holder.userImageView)
 
         holder.userImageView.setOnClickListener {
             Toast.makeText(it.context, "image click", Toast.LENGTH_SHORT).show()
