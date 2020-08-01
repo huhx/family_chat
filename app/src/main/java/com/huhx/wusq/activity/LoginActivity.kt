@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.huhx.wusq.HomeActivity
 import com.huhx.wusq.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -22,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
             val username = et_username.text.toString()
             val password = et_password.text.toString()
             if (username == "1234" && password == "huhx") {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
                 this.finish()
             } else {

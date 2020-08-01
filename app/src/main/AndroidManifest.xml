@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" />
         <activity android:name=".activity.MainActivity" />
         <activity
             android:name=".activity.LoginActivity"
