@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='learn_android_books'
+rootProject.name='family_chat'
