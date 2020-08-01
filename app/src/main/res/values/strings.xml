@@ -21,7 +21,9 @@
     <string name="user_register">用户注册</string>
     <string name="toolbar_title">测试标题</string>
     <string name="title_activity_home">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">微信</string>
+    <string name="title_dashboard">通讯录</string>
+    <string name="title_notifications">发现</string>
+    <string name="search">search</string>
+    <string name="title_me">我</string>
 </resources>

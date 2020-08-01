@@ -9,6 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.huhx.wusq.adapter.ViewPagerAdapter
 import com.huhx.wusq.ui.dashboard.DashboardFragment
 import com.huhx.wusq.ui.home.HomeFragment
+import com.huhx.wusq.ui.me.MeFragment
 import com.huhx.wusq.ui.notifications.NotificationsFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -42,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
             R.id.navigation_home -> view_pager.currentItem = 0
             R.id.navigation_dashboard -> view_pager.currentItem = 1
             R.id.navigation_notifications -> view_pager.currentItem = 2
+            R.id.navigation_me -> view_pager.currentItem = 3
         }
     }
 
@@ -50,9 +52,11 @@ class HomeActivity : AppCompatActivity() {
         val homeFragment = HomeFragment()
         val dashboardFragment = DashboardFragment()
         val notificationsFragment = NotificationsFragment()
+        val meFragment = MeFragment()
         viewPagerAdapter.addFragment(homeFragment)
         viewPagerAdapter.addFragment(dashboardFragment)
         viewPagerAdapter.addFragment(notificationsFragment)
+        viewPagerAdapter.addFragment(meFragment)
         view_pager.adapter = viewPagerAdapter
     }
 }
