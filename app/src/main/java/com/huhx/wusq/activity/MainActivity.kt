@@ -9,6 +9,7 @@ import com.huhx.wusq.listener.OnItemClickListener
 import com.huhx.wusq.adapter.UserRecyclerAdapter
 import com.huhx.wusq.domain.User
 import kotlinx.android.synthetic.main.main_activity.*
+import kotlinx.android.synthetic.main.main_toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
         recycler_view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recycler_view.adapter = UserRecyclerAdapter(getUsers(), onItemClickListener())
+
+        iv_back.setOnClickListener { finish() }
+        iv_more.setOnClickListener { Toast.makeText(this, "show more", Toast.LENGTH_SHORT).show() }
     }
 
     private fun onItemClickListener(): OnItemClickListener {

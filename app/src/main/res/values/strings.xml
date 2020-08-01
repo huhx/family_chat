@@ -19,4 +19,5 @@
     <string name="qq_text">QQ</string>
     <string name="forget_password">忘记密码</string>
     <string name="user_register">用户注册</string>
+    <string name="toolbar_title">测试标题</string>
 </resources>
