@@ -21,7 +21,15 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        initRefresh()
         initRecyclerView()
+    }
+
+    private fun initRefresh() {
+        pull_refresh.setOnRefreshListener {
+            Toast.makeText(activity, "fresh data", Toast.LENGTH_SHORT).show()
+            pull_refresh.isRefreshing = false
+        }
     }
 
     private fun initRecyclerView() {
