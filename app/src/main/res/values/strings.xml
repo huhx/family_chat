@@ -13,4 +13,10 @@
     <string name="my_account">My Account</string>
     <string name="settings">Settings</string>
     <string name="my_cart">My Cart</string>
+    <string name="account_hint_text">QQ号/手机号/邮箱</string>
+    <string name="password_hint_text">输入密码</string>
+    <string name="image_description">No image found here</string>
+    <string name="qq_text">QQ</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="user_register">用户注册</string>
 </resources>
