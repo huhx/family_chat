@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         ibt_submit.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            this.finish()
         }
     }
 }
