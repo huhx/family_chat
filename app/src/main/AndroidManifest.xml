@@ -16,7 +16,6 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".activity.MainActivity" />
         <activity
             android:name=".activity.LoginActivity"
             android:windowSoftInputMode="adjustResize">
