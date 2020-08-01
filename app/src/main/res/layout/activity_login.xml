@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/qq_header">
 
         <EditText
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -52,6 +53,7 @@
             android:textCursorDrawable="@drawable/edit_text_cursor" />
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_border"
@@ -110,8 +112,7 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1"
-            android:paddingVertical="5dp" />
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/user_register"

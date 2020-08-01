@@ -19,9 +19,15 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "user register", Toast.LENGTH_SHORT).show()
         }
         ibt_submit.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            this.finish()
+            val username = et_username.text.toString()
+            val password = et_password.text.toString()
+            if (username == "1234" && password == "huhx") {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                this.finish()
+            } else {
+                Toast.makeText(this, "密码不正确", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
