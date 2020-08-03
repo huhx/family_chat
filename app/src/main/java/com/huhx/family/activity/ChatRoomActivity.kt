@@ -1,7 +1,8 @@
-package com.huhx.family
+package com.huhx.family.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.huhx.family.R
 import kotlinx.android.synthetic.main.activity_chat_room.*
 import kotlinx.android.synthetic.main.main_toolbar.*
 

@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ChatRoomActivity" />
+        <activity android:name=".activity.ChatRoomActivity" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".activity.LoginActivity"

@@ -1,4 +1,4 @@
-package com.huhx.family
+package com.huhx.family.activity
 
 import android.os.Bundle
 import android.view.MenuItem

@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.huhx.family.ChatRoomActivity
+import com.huhx.family.activity.ChatRoomActivity
 import com.huhx.family.R
 import com.huhx.family.adapter.UserRecyclerAdapter
 import com.huhx.family.domain.User
@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
             override fun onItemClick(user: User) {
                 val intent = Intent(activity, ChatRoomActivity::class.java)
                 intent.putExtra("username", user.fullname)
-                activity?.startActivity(intent)
+                startActivity(intent)
             }
 
             override fun onItemLongClick(user: User) {
