@@ -5,7 +5,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.huhx.family.adapter.ViewPagerAdapter
 import com.huhx.family.ui.dashboard.DashboardFragment
 import com.huhx.family.ui.home.HomeFragment
@@ -15,7 +14,6 @@ import com.huhx.family.R
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +25,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initEvent() {
-        nav_view.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        nav_view.setOnNavigationItemSelectedListener { item ->
             switchMenu(item)
-            return@OnNavigationItemSelectedListener true
-        })
+            true
+        }
         view_pager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
             override fun onPageSelected(position: Int) {
                 nav_view.menu.getItem(position).isChecked = true
@@ -49,16 +47,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupViewPager() {
-        val viewPagerAdapter =
-            ViewPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
-        val homeFragment = HomeFragment()
-        val dashboardFragment = DashboardFragment()
-        val notificationsFragment = NotificationsFragment()
-        val meFragment = MeFragment()
-        viewPagerAdapter.addFragment(homeFragment)
-        viewPagerAdapter.addFragment(dashboardFragment)
-        viewPagerAdapter.addFragment(notificationsFragment)
-        viewPagerAdapter.addFragment(meFragment)
+        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+        viewPagerAdapter.addFragments(HomeFragment(), DashboardFragment(), NotificationsFragment(), MeFragment())
         view_pager.adapter = viewPagerAdapter
     }
 }

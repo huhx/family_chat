@@ -15,8 +15,8 @@ class ViewPagerAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAdapte
         return mFragmentList.size
     }
 
-    fun addFragment(fragment: Fragment) {
-        mFragmentList.add(fragment)
+    fun addFragments(vararg fragments: Fragment) {
+        mFragmentList.addAll(fragments)
     }
 
 }
