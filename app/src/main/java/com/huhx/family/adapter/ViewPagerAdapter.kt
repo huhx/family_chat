@@ -7,16 +7,12 @@ import androidx.fragment.app.FragmentPagerAdapter
 class ViewPagerAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAdapter(fm, behavior) {
     private var mFragmentList = ArrayList<Fragment>()
 
-    override fun getItem(position: Int): Fragment {
-        return mFragmentList[position]
-    }
+    override fun getItem(position: Int): Fragment = mFragmentList[position]
 
-    override fun getCount(): Int {
-        return mFragmentList.size
-    }
+    override fun getCount(): Int = mFragmentList.size
 
-    fun addFragment(fragment: Fragment) {
-        mFragmentList.add(fragment)
+    fun addFragments(vararg fragments: Fragment) {
+        mFragmentList.addAll(fragments)
     }
 
 }
