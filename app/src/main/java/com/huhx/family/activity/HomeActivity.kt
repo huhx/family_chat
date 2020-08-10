@@ -2,7 +2,10 @@ package com.huhx.family.activity
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View.INVISIBLE
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 import androidx.viewpager.widget.ViewPager
 import com.huhx.family.adapter.ViewPagerAdapter
@@ -18,7 +21,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        setSupportActionBar(findViewById(R.id.my_toolbar))
+        val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
+        setSupportActionBar(toolbar)
+        val imageView = toolbar.findViewById<ImageView>(R.id.iv_back)
+        imageView.visibility = INVISIBLE
 
         setupViewPager()
         initEvent()
