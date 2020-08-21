@@ -1,21 +1,23 @@
 package com.huhx.family.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.huhx.family.R
-import kotlinx.android.synthetic.main.activity_chat_room.*
-import kotlinx.android.synthetic.main.main_toolbar.*
+import com.huhx.family.databinding.ActivityChatRoomBinding
 
 class ChatRoomActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityChatRoomBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat_room)
+        binding = ActivityChatRoomBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.my_toolbar))
         val username = intent.getStringExtra("username")
-        tv_username.text = username
+        binding.tvUsername.text = username
 
-        iv_back.setOnClickListener {
+        binding.mainToobar.ivBack.setOnClickListener {
             this.finish()
         }
     }

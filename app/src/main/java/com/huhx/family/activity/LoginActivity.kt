@@ -1,26 +1,29 @@
 package com.huhx.family.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.huhx.family.R
-import kotlinx.android.synthetic.main.activity_login.*
+import androidx.appcompat.app.AppCompatActivity
+import com.huhx.family.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        forget_password.setOnClickListener {
+        binding.forgetPassword.setOnClickListener {
             Toast.makeText(this, "forget password", Toast.LENGTH_SHORT).show()
         }
-        user_register.setOnClickListener {
+        binding.userRegister.setOnClickListener {
             Toast.makeText(this, "user register", Toast.LENGTH_SHORT).show()
         }
-        ibt_submit.setOnClickListener {
-            val username = et_username.text.toString()
-            val password = et_password.text.toString()
+        binding.ibtSubmit.setOnClickListener {
+            val username = binding.etUsername.text.toString()
+            val password = binding.etPassword.text.toString()
             if (username == "1234" && password == "huhx") {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
